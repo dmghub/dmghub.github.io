@@ -1,0 +1,289 @@
+/* BACKGROUND */
+body{
+    background-image: url(../img/bg.jpg);
+    background-color: dimgray;
+    margin: 0;
+    padding: 0; 
+}
+
+
+/* CHECKERS */
+.w_ch, .b_ch, .w_king, .b_king{
+	width: 80px;
+	height: 80px;
+	border-radius: 100px;
+	top: 10px;
+	left: 10px;
+	position: absolute;
+}
+.w_ch:before, .b_ch:before, .w_king:before, .b_king:before{
+	border-radius: 100px;
+	content: '';
+	height: 62px;
+	width: 62px;
+	position: absolute;
+	left: 6px; top: 6px;
+}
+.w_ch:after, .b_ch:after, .w_king:after, .b_king:after{
+	border-radius: 100px;
+	content: '';
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	left: 26px; top: 26px;
+}
+.w_ch, .w_king{
+	background: #eee;
+}
+.w_ch:before{
+	border: 3px solid palevioletred;
+}
+.w_ch:after{
+	border: 4px solid palevioletred;
+}
+.w_ch:hover, .w_king:hover{
+	background-color: white;
+}
+.w_ch:hover:before{
+	border: 3px solid crimson;
+}
+.w_ch:hover:after{
+	border: 4px solid crimson;
+}
+
+.b_ch, .b_king{
+	background: #444;
+}
+.b_ch:before{
+	border: 3px solid cornflowerblue;
+}
+.b_ch:after{
+	border: 4px solid cornflowerblue;
+}
+.b_ch:hover, .b_king:hover{
+	background-color: black;
+}
+.b_ch:hover:before{
+	border: 3px solid deepskyblue;
+}
+.b_ch:hover:after{
+	border: 4px solid deepskyblue;
+}
+
+
+/* KINGS */
+.w_king:before{
+	border: 3px solid palevioletred;
+	background: palevioletred;
+}
+.w_king:after{
+	border: 4px solid palevioletred;
+	background: #eee;
+}
+.w_king:hover:after{
+	border: 4px solid crimson;
+	background: white;
+}
+.w_king:hover:before{
+	border: 3px solid crimson;
+	background: crimson;
+}
+
+.b_king:before{
+	border: 3px solid cornflowerblue;
+	background: cornflowerblue;
+}
+.b_king:after{
+	border: 4px solid cornflowerblue;
+	background: #444;
+}
+.b_king:hover:before{
+	border: 3px solid deepskyblue;
+	background: deepskyblue;
+}
+.b_king:hover:after{
+	border: 4px solid deepskyblue;
+	background: black;
+}
+
+
+/* INDEXES OF CELLS */
+.v_white, .h_white, .v_black, .h_black {
+	margin: 0;
+	padding: 0;
+	font-size: 0px;
+	position: absolute;
+	/*display: none;*/
+}
+
+/*.v_black, .h_black {
+	display: none;
+}*/
+
+.hb_text, .vb_text{
+	color: moccasin;
+	font-family: "Courier New";
+	font-size: 33px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	line-height: 1;
+	margin: 0;
+}
+.hb_text{
+	padding: 0px 40px 0px 40px;
+	display: inline-block;
+}
+.vb_text{
+	padding: 33px 0 34px 0;
+	display: block;
+}
+
+
+/* BORDERS */
+.border_dark{
+	width: 920px;
+	height: 920px;
+	background: chocolate;
+	position: relative;
+	display: block;
+}
+.border_light{
+	width: 810px;
+	height: 810px;
+	background: moccasin;
+	position: absolute;
+}
+
+
+/* CELLS */
+.dc, .lc{
+	width: 100px;
+	height: 100px;
+	background: sienna;
+	position: absolute;
+}
+.dc{
+	background: sienna;
+}
+.lc{
+	background: moccasin;
+}
+
+
+/* CHAT */
+.chat{
+	top: 50px;
+	left: 50px;
+	position: relative;
+	display: block;
+}
+textarea.history, textarea.message{
+	font-family: "Courier New", monospace;
+	font-size: 18px;
+	color: lime;
+
+	border: solid 1px red;
+	background: #101010;
+	opacity: 0.8;
+	
+	padding: 10px 10px 10px 10px;
+	margin: 0;
+
+	position: absolute;
+	resize: none;
+}
+textarea.history{
+	width: 400px;
+	height: 300px;
+	top: 0px;
+	left: 0px;
+}
+textarea.message{
+	width: 339px;
+	height: 60px;
+	top: 321px;
+	left: 0px;
+	border-right: 0px;
+}
+.send_msg{
+	border-color: red;
+	opacity: 0.8;
+	border-left: 0px;
+	border-top: solid 1px red;
+	border-bottom: solid 1px red;
+	border-right: solid 1px red;
+	background-color: #101010;
+	top: 321px; left: 359px;
+	height: 82px;
+	position: absolute;
+}
+.send_msg:focus, .message, .history{
+	outline: none;
+}
+
+
+
+
+/*possible*/
+.dc_possible{
+	background-color: #84a3cc;
+}
+
+/*checked*/
+.dc_checked{
+	background-color: peru;
+}
+
+
+
+/* SCORE */
+.score{
+	top: 50px;
+	left: 1460px;
+	width: 400px;
+	height: 920px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+}
+.divisor{
+	background: yellow;
+	top: 459px; left: 0px;
+	border: 0px;
+	width: 400px;
+	height: 3px;
+	margin:0;
+	padding: 0;
+	position: absolute;
+}
+.ch_count{
+	font-size: 40px;
+	font-family: "Courier New", monospace;
+	font-weight: normal;
+	color: darkorange;
+	padding: 0;
+	border-width: 0px;
+	outline-width: 0px;
+	margin: 0;
+	position: absolute;
+}
+.timer{
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: yellow;
+  font-family: "Courier New", monospace;
+  font-size: 20px;
+  padding: 5px 10px;
+  width: 50px;
+  text-align: center;
+  position: absolute;
+  right: 10px;
+  top: 0px;
+}
+
+
+
+.hide{
+	display: none;
+}
